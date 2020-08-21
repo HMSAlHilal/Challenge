@@ -16,8 +16,7 @@ const f=(array,num)=>{
 	if (result.length===1) {
 		result.unshift(i);
 	}
-	return result;
-	
+	return result;	
 }
 
 const mainfunction=()=>{
