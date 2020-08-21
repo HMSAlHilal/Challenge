@@ -21,18 +21,14 @@ const f=(array,num)=>{
 }
 
 const mainfunction=()=>{
-
 	let array = arrText.value.split(",").map(n=>Number(n));
 	console.log(array);
 	let num=Number(numText.value);
 	let answer=f(array,num);
 	console.log(answer);
 	if(answer.length>0){
-
-
 	result.innerText="Answer is: "+answer;
 	}
-
 	else{
 		result.innerText="Ther is no answer";
 	}
