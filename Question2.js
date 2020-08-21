@@ -7,10 +7,10 @@ const f=(array,num)=>{
 	let i=array[0];
 	let j=num-i;
 	let result=[];
-	result=array.filter((num,i) =>num===j && i!==0);
+	array.shift();
+	result=array.filter((num,i) =>num===j);
 	console.log `i=${i} j=${j} array is:${array}`;
 	if (result.length===0 && array.length>1){
-		array.shift();
 		result=f(array,num);
 	}
 	if (result.length===1) {
