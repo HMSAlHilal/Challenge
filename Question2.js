@@ -10,10 +10,11 @@ const f=(array,num)=>{
 	result=array.filter((num,i) =>num===j && i!==0);
 	console.log `i=${i} j=${j} array is:${array}`;
 	if (result.length===0 && array.length>1){
-		result=f(array.slice(1,array.length),num);
+		array.shift();
+		result=f(array,num);
 	}
 	if (result.length===1) {
-		result.push(i);
+		result.unshift(i);
 	}
 	return result;
 	
