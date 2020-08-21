@@ -1,12 +1,13 @@
-const array=[1,2,5,6,3,7];
-const num =4;
-
+let btn=document.getElementById("btn");
+let arrText=document.getElementById("arrText");
+let numText=document.getElementById("numText");
+let result=document.getElementById("result");
 
 const f=(array,num)=>{
 	let i=array[0];
 	let j=num-i;
 	let result=[];
-	result=array.filter(num =>num===j);
+	result=array.filter((num,i) =>num===j && i!==0);
 	console.log `i=${i} j=${j} array is:${array}`;
 	if (result.length===0 && array.length>1){
 		result=f(array.slice(1,array.length),num);
@@ -18,8 +19,22 @@ const f=(array,num)=>{
 	
 }
 
+const mainfunction=()=>{
 
-f(array,num);
+	let array = arrText.value.split(",").map(n=>Number(n));
+	console.log(array);
+	let num=Number(numText.value);
+	let answer=f(array,num);
+	console.log(answer);
+	if(answer.length>0){
 
 
-c
+	result.innerText="Answer is: "+answer;
+	}
+
+	else{
+		result.innerText="Ther is no answer";
+	}
+}
+
+btn.addEventListener("click", function(){mainfunction()});

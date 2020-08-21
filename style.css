@@ -1,0 +1,18 @@
+body{
+	text-align: center;
+}
+.main{
+		display: grid;
+		grid-template-columns: 1fr 15fr;
+		grid-row-gap: 10px;
+}
+
+#btn{
+	
+	width: 200px;
+	margin: 10px;
+}
+
+p{
+	font-size: 3em;
+}
